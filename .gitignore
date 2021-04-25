@@ -44,3 +44,6 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Cridentials like apikey, api secret and so on...
+/lib/api/credentials.dart

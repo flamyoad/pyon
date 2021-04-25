@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pyon/api/authorize_api.dart';
 import 'package:pyon/screen/search/search_screen.dart';
 import 'package:pyon/screen/settings/settings_screen.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Pyon',
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
@@ -55,6 +56,8 @@ class MainPageState extends State<MainPage> {
       SearchScreen(title: widget.title),
       SettingsScreen(title: widget.title),
     ];
+
+    AuthorizeApi.requestAccessToken();
   }
 
   @override
