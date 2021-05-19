@@ -1,6 +1,6 @@
-class RedditPost {
+class RedditPostMinimal {
   // We can also define a constructor using curly braces { } to specify named parameters.
-  const RedditPost({
+  const RedditPostMinimal({
     this.id,
     this.headerIcon,
     this.subredditName,

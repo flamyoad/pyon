@@ -1,9 +1,9 @@
-import 'package:pyon/model/reddit_post.dart';
+import 'package:pyon/model/reddit_post_minimal.dart';
 
 class MockApi {
-  static List<RedditPost> getMockData() {
-    return List<RedditPost>.generate(30, (index) =>
-        RedditPost(
+  static List<RedditPostMinimal> getMockData() {
+    return List<RedditPostMinimal>.generate(30, (index) =>
+        RedditPostMinimal(
             id: index,
             headerIcon: "",
             subredditName: "r/tifu",

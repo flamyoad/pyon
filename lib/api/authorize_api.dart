@@ -18,14 +18,11 @@ class AuthorizeApi {
         data: requestBody,
         options:
             Options(contentType: Headers.formUrlEncodedContentType, headers: {
-          'Authorization': "Basic ${base64Encode(utf8.encode(Cridentials.clientKey + ":"))}"
+          'Authorization': "Basic ${base64Encode(utf8.encode(Credentials.clientKey + ":"))}"
         }));
 
     if (response.statusCode == 200) {
-      var result = json.decode(response.data);
-      log(result);
+      return response.data['access_token'];
     }
-
-    return "";
   }
 }

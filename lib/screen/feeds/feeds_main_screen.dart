@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pyon/screen/feeds/best_feeds_tab.dart';
 import 'package:pyon/screen/feeds/hot_feeds_tab.dart';
+import 'package:pyon/screen/feeds/new_feeds_tab.dart';
 
 class FeedsMainScreen extends StatefulWidget {
   final String title;
@@ -17,9 +17,9 @@ class FeedsMainScreen extends StatefulWidget {
 class _FeedsMainScreenState extends State<FeedsMainScreen> {
 //  List<String> _tabList = ["Best", "Hot", "New", "Top", "Rising"];
   List<Widget> _tabList = [
-    Tab(text: "Best", icon: Icon(Icons.sports_cricket)),
+//    Tab(text: "Best", icon: Icon(Icons.sports_cricket)),
     Tab(text: "Hot", icon: Icon(Icons.fireplace)),
-    Tab(text: "New", icon: Icon(Icons.autorenew)),
+    Tab(text: "New", icon: Icon(Icons.sports_cricket)),
     Tab(text: "Top", icon: Icon(Icons.topic)),
     Tab(text: "Rising", icon: Icon(Icons.flaky)),
   ];
@@ -37,7 +37,12 @@ class _FeedsMainScreenState extends State<FeedsMainScreen> {
           bottom: TabBar(tabs: _tabList),
         ),
         body: TabBarView(
-          children: <Widget>[BestFeedsTab(), HotFeedsTab(), HotFeedsTab(), HotFeedsTab(), HotFeedsTab()],
+          children: <Widget>[
+            NewFeedsTab(),
+            HotFeedsTab(),
+            HotFeedsTab(),
+            HotFeedsTab()
+          ],
         ),
       ),
     );
